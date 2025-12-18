@@ -3,7 +3,7 @@ import 'dotenv/config';
 
 async function connection() {
     try {
-        const uri = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/storeDb";
+        const uri = process.env.MONGO_URI;
         await mongoose.connect(uri);
         console.log('Database connection succeeded');
     } catch (err) {
