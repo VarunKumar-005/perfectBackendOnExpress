@@ -29,7 +29,7 @@ export const loginUser = async (email, password) => {
     }
 
     const payload = { username: user.name, id: user._id };
-    const token = jwt.sign(payload, process.env.JWT_SECRET || "moneyboy", { expiresIn: "1h" });
+    const token = jwt.sign(payload, process.env.JWT_SECRET , { expiresIn: "1h" });
 
     return { user, token };
 };
